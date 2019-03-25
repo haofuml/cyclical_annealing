@@ -16,7 +16,7 @@ This repository contains source code to reproduce the results presented in the p
 ```
 
 
-| β schedules | The VAE objective, agumented with β 
+| β schedules | The VAE objective, augmented with β 
 |:-------------------------:|:-------------------------:
 <img src="figs/NAACL_2019_Cyclical.png" width=300> |  <img src="figs/elbo_beta.png" width=200> 
 
@@ -29,7 +29,7 @@ The proposed schedule has two hyper-parameters:  1) The number of cyclles *M*; a
 |  <img src="figs/Two_path_fig.png" width=200>  | <img src="figs/Two_path_caption.png" width=350> 
 |:-------------------------:|:-------------------------:
 
-β=0 re-opens Path B KL, allowing the high quality latent codes learned the previous cycle to train the decoder.
+β=0 re-opens Path B, allowing the high quality latent codes learned the previous cycle to train the decoder.
 
 ## Contents
 There are two steps to use this codebase to reproduce the results in the paper.
@@ -63,16 +63,19 @@ All language model code and data are at [`language_model`](./language_model):
 Dependencies: This code is based on `Python 3.6`, with the main dependencies being [Pytorch==0.2.0](https://pytorch.org/). We also require the `h5py` package for preprocessing.
 
 Preprocess the raw data before running:
+
 ```
 python preprocess_text.py --trainfile data/ptb/train.txt --valfile data/ptb/val.txt --testfile data/ptb/test.txt --outputfile data/ptb/ptb
 ```
 
 For vae model with cyclical annealing, the command is:
+
 ```
 python train_text_bl_ptb.py --model vae --log_dir logs/ptb/vae_bl
 ```
 
 For vae model with monotonic annealing, the command is:
+
 ```
 python train_text_cyc_ptb.py --model vae --log_dir logs/ptb/vae_cyc
 ```
@@ -106,6 +109,7 @@ monotonic annealing + bag-of-words loss: `python kgcvae_swda_bl.py`
 2. Testing:
 
 After training with any setup, modify the TF flags at the top of the `kgcvae_swda` file as follows:
+
 ```forward_only: False -> True```
 
 Then run the same `kgcvae_swda` as training. By default, multi-reference testing will be conducted
