@@ -149,12 +149,12 @@ Jupyter notebooks in [`plots`](./plots) folders are used to reproduce paper figu
 Note that without modification, we have copyed our extracted results into the notebook, and script will output figures in the paper. If you've run your own training and wish to plot results, you'll have to organize your results in the same format instead.
 
 ## Acknowledgements
-The implementation in our experiments heavily depends on three NLP applications published on Github repositories; 
+The implementation in our experiments heavily depends on three NLP applications published on Github repositories: 
 [SA-VAE](https://github.com/harvardnlp/sa-vae), [NeuralDialog-CVAE](https://github.com/snakeztc/NeuralDialog-CVAE) and [TextCNN_public](https://github.com/dreasysnail/textCNN_public)
 
 We acknowledge all the authors who made their code public, which tremendously accelerates our project progress.
 
 ## Questions?
-Please drop us ([Hao](https://github.com/haofuml), [Chunyuan](http://chunyuan.li/)) a line if you have any questions.
+Please drop us ([Hao](https://github.com/haofuml) and [Chunyuan](http://chunyuan.li/)) a line if you have any questions.
 
 
