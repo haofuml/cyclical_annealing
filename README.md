@@ -87,7 +87,7 @@ It takes the following options (among others) as arguments:
 
 - `--model` It specifies types of langauge model; default `vae`.  
 - `--log_dir` Address to save the training log.
--For other arguements, please refer to the github repo [sa-vae](https://github.com/harvardnlp/sa-vae)
+- For other arguements, please refer to the github repo [sa-vae](https://github.com/harvardnlp/sa-vae)
 
 To run savae model, replace `vae` in `--model` and `--log_dir` with `savae`
 
@@ -104,10 +104,10 @@ Use pre-trained Word2vec: Download Glove word embeddings from [here](https://nlp
 
 To train with different setup, run with one of the command:
 
-  cyclical annealing: `python kgcvae_swda_cyc_elbo.py`
-  monotonic annealing: `python kgcvae_swda_bl_elbo.py`
-  cyclical annealing + bag-of-words loss: `python kgcvae_swda_cyc.py`
-  monotonic annealing + bag-of-words loss: `python kgcvae_swda_bl.py`
+  - cyclical annealing: `python kgcvae_swda_cyc_elbo.py`
+  - monotonic annealing: `python kgcvae_swda_bl_elbo.py`
+  - cyclical annealing + bag-of-words loss: `python kgcvae_swda_cyc.py`
+  - monotonic annealing + bag-of-words loss: `python kgcvae_swda_bl.py`
 
 2. Testing:
 
@@ -128,17 +128,17 @@ Dependencies: This code is based on `Python 2.7`, with the main dependencies bei
 
 To run with different setup, run with one of the command:
 
-ae: `python semi_yelp_ae_pre.py`
-vae with monotonic annealing: `python semi_yelp_vae_pre.py`
-vae with cyclical annealing: `python semi_yelp_cyc_pre.py`
+  - ae: `python semi_yelp_ae_pre.py`
+  - vae with monotonic annealing: `python semi_yelp_vae_pre.py`
+  - vae with cyclical annealing: `python semi_yelp_cyc_pre.py`
 
 2. Supervised Finetuning & Latent Visualization
 
 After pretraining, run with corresponding setup to do fintuning:
 
-  ae: `python semi_yelp_ae_ft.py`
-  vae with monotonic annealing: `python semi_yelp_vae_ft.py`
-  vae with cyclical annealing: `python semi_yelp_cyc_ft.py`
+  - ae: `python semi_yelp_ae_ft.py`
+  - vae with monotonic annealing: `python semi_yelp_vae_ft.py`
+  - vae with cyclical annealing: `python semi_yelp_cyc_ft.py`
 
 To visualize latent space, modify the `plot_type` property of Options in `tsne_plot.py` file as follows:
 ```self.plot_type = 'vae'```
@@ -153,7 +153,10 @@ Note that without modification, we have copyed our extracted results into the no
 
 ## Acknowledgements
 The implementation in our experiments heavily depends on three NLP applications published on Github repositories: 
-[SA-VAE](https://github.com/harvardnlp/sa-vae), [NeuralDialog-CVAE](https://github.com/snakeztc/NeuralDialog-CVAE) and [TextCNN_public](https://github.com/dreasysnail/textCNN_public).
+
+- [SA-VAE](https://github.com/harvardnlp/sa-vae)
+- [NeuralDialog-CVAE](https://github.com/snakeztc/NeuralDialog-CVAE) 
+- [TextCNN_public](https://github.com/dreasysnail/textCNN_public)
 
 We acknowledge all the authors who made their code public, which tremendously accelerates our project progress.
 
