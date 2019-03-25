@@ -4,7 +4,7 @@
 <img src="figs/under_construction.png" width="200">  Still Under Construction...
 -->
 
-The **Cyclical Annealing** is proposed to ... This repository contains source code to reproduce the results presented in the paper [Cyclical Annealing Schedule: A Simple Approach to Mitigating KL Vanishing](arxiv-url) (NAACL 2019):
+This repository contains source code to reproduce the results presented in the paper [Cyclical Annealing Schedule: A Simple Approach to Mitigating KL Vanishing](arxiv-url) (NAACL 2019):
 
 ```
 @inproceedings{fu_cyclical_2019_naacl,
@@ -17,7 +17,7 @@ The **Cyclical Annealing** is proposed to ... This repository contains source co
 
 ## Introduction
 
-### Illustration of two-path in VAE with auto-regressive decoder
+### Two-path interpretation for VAE with an auto-regressive decoder
 
 
 ### Comparison of **Cyclical** and **Monotonic** annealing schedule
@@ -27,27 +27,21 @@ The **Cyclical Annealing** is proposed to ... This repository contains source co
 ## Contents
 There are two steps to use this codebase to reproduce the results in the paper.
 
-1. [Experiments](#experiments)
+1. [Visualization of Latent Space](#visualization-of-Latent-Space)
 
-    2.1. [Visualization of Latent Space](#visualization-of-Latent-Space)
+2. [Experiments](#experiments)
     
-    2.2. [Language Modeling](#language-model)
+    2.1. [Language Modeling](#language-modeling)
     
-    2.3. [Dialog Response Generation](#dialog-response-generation) 
+    2.2. [Dialog Response Generation](#dialog-response-generation) 
 
-    2.4. [Semi-supervised Text Classification](#semi-supervised-text-classification)
+    2.3. [Semi-supervised Text Classification](#semi-supervised-text-classification)
 
-2. [Reproduce paper figure results](#reproduce-paper-figure-results) 
+3. [Reproduce paper figure results](#reproduce-paper-figure-results) 
 
 
 ## Visualization of Latent Space
 
-
-Dependencies:
-
-To run:
-
-It takes the following options (among others) as arguments:
 
 
 ## Language Modeling
