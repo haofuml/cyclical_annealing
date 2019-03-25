@@ -42,7 +42,7 @@ There are two steps to use this codebase to reproduce the results in the paper.
     
     2.2. [Dialog Response Generation](#dialog-response-generation) 
 
-    2.3. [Semi-supervised Text Classification](#semi-supervised-text-classification)
+    2.3. [Unsupervised Language Pre-training](#Unsupervised-Language-Pre-training)
 
 3. [Reproduce paper figure results](#reproduce-paper-figure-results) 
 
@@ -115,7 +115,7 @@ After training with any setup, modify the TF flags at the top of the `kgcvae_swd
 Then run the same `kgcvae_swda` as training. By default, multi-reference testing will be conducted
 
 
-## Semi-supervised Text Classification
+## Unsupervised Language Pre-training
 
 All semi-supervised text classification code is at [`semi`](./semi):
 
