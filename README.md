@@ -24,7 +24,7 @@ This repository contains source code to reproduce the results presented in the p
 </p>
 
 Comparison between (a) traditional monotonic and (b) proposed cyclical annealing schedules. 
-The objective of **V ariational Autoencoder (VAE)** is the ELBO of log p(x) (ie, β=1). However, when trained with a constanty schedule β=1, the KL term L_R vanishes to 0, leading to the **KL vanishing** issue.   
+The objective of **Variational Autoencoder (VAE)** is the ELBO of log p(x) (ie, β=1). However, when trained with a constanty schedule β=1, the KL term L_R vanishes to 0, leading to the **KL vanishing** issue.   
 The proposed cyclical schedule has two hyper-parameters:  1) The number of cyclles *M*; and 2) *R*: the proportion used to increase the beta (1-R used to fix β).  In this figure, M=4 cycles are illustrated, R=0.5 of a cycle is used for increasing β.
 
 
