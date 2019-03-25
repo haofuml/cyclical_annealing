@@ -31,7 +31,7 @@ There are two steps to use this codebase to reproduce the results in the paper.
 
     2.1. [Visualization of Latent Space](#visualization-of-Latent-Space)
     
-    2.2. [Language Model](#language-model)
+    2.2. [Language Modeling](#language-model)
     
     2.3. [Dialog Response Generation](#dialog-response-generation) 
 
@@ -50,7 +50,7 @@ To run:
 It takes the following options (among others) as arguments:
 
 
-## Language Model
+## Language Modeling
 
 All language model code and data are at [`language_model`](./language_model):
 
@@ -139,7 +139,7 @@ Jupyter notebooks in [`plots`](./plots) folders are used to reproduce paper figu
 Note that without modification, we have copyed our extracted results into the notebook, and script will output figures in the paper. If you've run your own training and wish to plot results, you'll have to organize your results in the same format instead.
 
 ## Acknowledgements
-Some of our code is based on [sa-vae](https://github.com/harvardnlp/sa-vae), [NeuralDialog-CVAE](https://github.com/snakeztc/NeuralDialog-CVAE) and [textCNN_public](https://github.com/dreasysnail/textCNN_public)
+Some of our code is based on [SA-VAE](https://github.com/harvardnlp/sa-vae), [NeuralDialog-CVAE](https://github.com/snakeztc/NeuralDialog-CVAE) and [TextCNN_public](https://github.com/dreasysnail/textCNN_public)
 
 ## Questions?
 Please drop us ([Hao](https://github.com/haofuml), [Chunyuan](http://chunyuan.li/)) a line if you have any questions.
