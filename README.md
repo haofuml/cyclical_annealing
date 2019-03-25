@@ -1,4 +1,4 @@
-# Cyclical Annealing Schedule: \\ A Simple Approach to Mitigating KL Vanishing
+# Cyclical Annealing Schedule: A Simple Approach to Mitigating KL Vanishing
 
 <!--- 
 <img src="figs/under_construction.png" width="200">  Still Under Construction...
@@ -27,15 +27,15 @@ The proposed schedule has two hyper-parameters:  1) The number of cyclles *M*; a
 
 ### Two-path interpretation for VAE with an auto-regressive decoder
 
-
 |  <img src="figs/Two_path_fig.png" width=200>  | <img src="figs/Two_path_caption.png" width=350> 
 |:-------------------------:|:-------------------------:
 
+β=0 re-opens Path B KL, allowing the high quality latent codes learned the previous cycle to train the decoder.
 
 ## Contents
 There are two steps to use this codebase to reproduce the results in the paper.
 
-1. [Visualization of Latent Space](#visualization-of-Latent-Space)
+1. [Visualization of Latent Space](#Visualization-of-Latent-Space)
 
 2. [Experiments](#experiments)
     
@@ -48,7 +48,10 @@ There are two steps to use this codebase to reproduce the results in the paper.
 3. [Reproduce paper figure results](#reproduce-paper-figure-results) 
 
 
-## Visualization of Latent Space
+## Visualization of Learning Dynamics in the Latent Space
+
+A synthetic dataset of 10 sequences are considered for VAEs.
+We visualize the resulting division of the latent space, where each color corresponds to z ~ q(z|n), for n = 1,··· ,10. 
 
 |  <img src="figs/vis_toy_full.png" width=500> 
 |:-------------------------:
