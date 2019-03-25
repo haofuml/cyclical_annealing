@@ -15,13 +15,16 @@ This repository contains source code to reproduce the results presented in the p
 }
 ```
 
-## Introduction
+Comparison between (a) traditional monotonic and (b) proposed cyclical annealing schedules. In this figure, $M=4$ cycles are illustrated, $R=0.5$ of a cycle is used for increasing $\beta$.
+
+<img src="figs/NAACL_2019_Cyclical.png" width=300> | 
+
 
 ### Two-path interpretation for VAE with an auto-regressive decoder
 
 
-### Comparison of **Cyclical** and **Monotonic** annealing schedule
-
+|  <img src="figs/Two_path_fig.png" width=200>  | <img src="figs/Two_path_caption.png" width=350> 
+|:-------------------------:|:-------------------------:
 
 
 ## Contents
@@ -42,7 +45,9 @@ There are two steps to use this codebase to reproduce the results in the paper.
 
 ## Visualization of Latent Space
 
-
+|  <img src="figs/vis_toy_full.png" width=500> 
+|:-------------------------:
+|  <img src="figs/toy_learning_curve.png" width=500> 
 
 ## Language Modeling
 
