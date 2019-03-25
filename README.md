@@ -29,7 +29,7 @@ The proposed schedule has two hyper-parameters:  1) The number of cyclles *M*; a
 |  <img src="figs/Two_path_fig.png" width=200>  | <img src="figs/Two_path_caption.png" width=350> 
 |:-------------------------:|:-------------------------:
 
-β=0 re-opens Path B, allowing the high quality latent codes learned the previous cycle to train the decoder.
+In the 2nd and its following cycles, β=0 re-opens Path B, allowing the high quality latent codes learned the previous cycle to train the decoder.
 
 ## Contents
 There are two steps to use this codebase to reproduce the results in the paper.
