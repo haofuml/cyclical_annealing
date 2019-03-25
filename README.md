@@ -15,9 +15,13 @@ This repository contains source code to reproduce the results presented in the p
 }
 ```
 
-Comparison between (a) traditional monotonic and (b) proposed cyclical annealing schedules. In this figure, $M=4$ cycles are illustrated, $R=0.5$ of a cycle is used for increasing $\beta$.
+Comparison between (a) traditional monotonic and (b) proposed cyclical annealing schedules. 
 
-<img src="figs/NAACL_2019_Cyclical.png" width=300> | 
+The proposed schedule has two hyper-parameters:  1) The number of cyclles M; and 2) R: the proportion used to increase the beta (1-R used to fix β).  In this figure, M=4 cycles are illustrated, R=0.5 of a cycle is used for increasing β.
+
+| β schedules | The VAE objective, agumented with β 
+|:-------------------------:|:-------------------------:
+<img src="figs/NAACL_2019_Cyclical.png" width=300> |  \\ <img src="figs/elbo_beta.png" width=150> 
 
 
 ### Two-path interpretation for VAE with an auto-regressive decoder
