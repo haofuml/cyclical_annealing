@@ -25,7 +25,8 @@ This repository contains source code to reproduce the results presented in the p
 
 Comparison between (a) traditional monotonic and (b) proposed cyclical annealing schedules. 
 
-The objective of **Variational Autoencoder (VAE)** is the ELBO of log p(x) (ie, β=1). However, when trained with a constanty schedule β=1, the KL term L_R vanishes to 0, leading to the **KL vanishing** issue. The proposed cyclical schedule has two hyper-parameters: 1)  *M*: the number of cyclles; and 2) *R*: the proportion used to increase the beta (1-R used to fix β).  In this figure, M=4 cycles are illustrated, R=0.5 of a cycle is used for increasing β.
+The objective of **Variational Autoencoders (VAEs)** is the ELBO of log p(x) (ie, β=1): Learning an informative latent feature z ~ q(z|x) to represent the observation x, while regularized towards the latent prior p(z). 
+However, when trained with a constant schedule β=1, the KL term L_R vanishes to 0, leading to the **KL vanishing** issue. The proposed cyclical schedule has two hyper-parameters: 1)  *M*: the number of cyclles; and 2) *R*: the proportion used to increase the beta (1-R used to fix β).  In this figure, M=4 cycles are illustrated, R=0.5 of a cycle is used for increasing β.
 
 
 ### Two-path interpretation for VAE with an auto-regressive decoder
