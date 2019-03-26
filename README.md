@@ -1,10 +1,8 @@
 # Cyclical Annealing Schedule: A Simple Approach to Mitigating KL Vanishing
 
-<!--- 
-<img src="figs/under_construction.png" width="200">  Still Under Construction...
--->
 
-This repository contains source code to reproduce the results presented in the paper [Cyclical Annealing Schedule: A Simple Approach to Mitigating KL Vanishing](arxiv-url) (NAACL 2019):
+
+This repository contains source code to reproduce the results presented in the paper [Cyclical Annealing Schedule: A Simple Approach to Mitigating KL Vanishing](https://arxiv.org/abs/1903.10145) (NAACL 2019):
 
 ```
 @inproceedings{fu_cyclical_2019_naacl,
