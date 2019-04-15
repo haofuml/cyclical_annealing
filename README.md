@@ -34,6 +34,24 @@ However, when trained with a constant schedule β=1, the KL term L_R vanishes to
 
 In the 2nd and its following cycles, β=0 re-opens Path B, allowing the high quality latent codes learned the previous cycle to train the decoder.
 
+
+```python
+
+def frange_cycle_linear(start, stop, n_iter, n_cycle=4, ratio=0.5):
+    L = np.ones(n_iter)
+    period = n_iter/n_cycle
+    step = (stop-start)/(period*ratio) # linear schedule
+
+    for c in range(n_cycle):
+
+        v , i = start , 0
+        while v <= stop and (int(i+c*period) < n_iter):
+            L[int(i+c*period)] = v
+            v += step
+            i += 1
+    return L 
+```
+
 ## Contents
 There are two steps to use this codebase to reproduce the results in the paper.
 
