@@ -168,7 +168,7 @@ Then run `python tsne_plot.py`.
 
 
 ## Reproduce paper figure results
-Jupyter notebooks in [`plots`](./plots) folders are used to reproduce paper figure results.
+Jupyter notebooks in [`plot`](./plot) folders are used to reproduce paper figure results.
 
 Note that without modification, we have copyed our extracted results into the notebook, and script will output figures in the paper. If you've run your own training and wish to plot results, you'll have to organize your results in the same format instead.
 
