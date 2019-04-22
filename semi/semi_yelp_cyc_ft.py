@@ -24,7 +24,7 @@ import pdb
 
 from model_new import *
 from utils import prepare_data_for_cnn, prepare_data_for_rnn, get_minibatches_idx, normalizing, restore_from_save, \
-    prepare_for_bleu, cal_BLEU, sent2idx, _clip_gradients_seperate_norm
+    prepare_for_bleu, cal_BLEU, sent2idx, _clip_gradients_seperate_norm, set_global_seeds
 from denoise import *
 
 profile = False
@@ -62,14 +62,15 @@ class Options(object):
         self.embed_size = 256
         self.lr = 1e-4
         self.category = 1
+        self.seed = 123
 
         self.part_data = True
-        self.train_percent = 1  # 10%  1%
+        self.train_percent = 10  # 10%  1%
 
         self.layer = 3
         self.stride = [2, 2, 2]   # for two layer cnn/deconv , use self.stride[0]
         self.batch_size = 32
-        self.max_epochs = 1000
+        self.max_epochs = 3000
         self.n_gan = 900 # encoder output dim, self.filter_size * 3
         self.n_hid = 256 # lstm cell dim
         self.z_dim = 256 # latent dim
@@ -302,6 +303,7 @@ def main():
     test_lab = np.array(test_lab, dtype='float32')
 
     opt = Options()
+    set_global_seeds(opt.seed)
     opt.n_words = len(ixtoword)
     sys.stdout = open(opt.log_path + '.log.txt', 'w')
 
@@ -310,7 +312,7 @@ def main():
     print('Total words: %d' % opt.n_words)
     
     if opt.part_data:
-        np.random.seed(123)
+        # np.random.seed(123)
         train_ind = np.random.choice(len(train_lab), int(len(train_lab)*opt.train_percent/100), replace=False)
         train = [train[t] for t in train_ind]
         train_lab = [train_lab[t] for t in train_ind]

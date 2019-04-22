@@ -12,6 +12,13 @@ import data_utils
 import sys
 from tensorflow.python.ops import clip_ops
 from rougescore import rouge_n, rouge_1, rouge_2, rouge_l
+import random
+
+def set_global_seeds(seed):
+    np.random.seed(seed)
+    random.seed(seed)
+    tf.set_random_seed(seed)
+
 
 def lrelu(x, leak=0.2, name="lrelu"):
     with tf.variable_scope(name):
