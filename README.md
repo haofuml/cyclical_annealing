@@ -54,6 +54,7 @@ def frange_cycle_linear(n_iter, start=0.0, stop=1.0,  n_cycle=4, ratio=0.5):
 
 Please see more schedule examples [here](plot/plot_schedules.ipynb).
 
+Recent development: Cyclical annealing schedule has been used to build the **first big VAE language model: [Optimus](https://github.com/ChunyuanLI/Optimus)**
 
 ## Contents
 There are two steps to use this codebase to reproduce the results in the paper.
